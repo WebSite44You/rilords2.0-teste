@@ -1,0 +1,93 @@
+@media (max-width:900px){
+    .linha-decorativa{
+        width: 85%;
+    }
+    .container{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    .subir{
+        bottom: 20px;
+    }
+    .projeto{
+        width: 65%;
+    }
+}
+@media (max-width:700px){
+    .container2{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+    }
+    .linha-decorativa{
+        width: 90%;
+    }
+}
+@media (max-width:600px){
+    .projeto{
+        width: 90%;
+    }
+    .hotel{
+        width: 95%;
+    }
+}
+@media (max-width:450px){
+    .hotel h1{
+        font-size: 35px;
+    }
+}
+@media (max-width:400px){
+    .header-navbar nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .header-navbar nav ul li:hover  ul{
+        top: 35px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .header-navbar nav ul li ul{
+        top: 20px;
+    }
+    nav ul li:nth-child(3){
+        width: 100%;
+        text-align: center;
+    }
+    .container2{
+        width: 100%;
+    }
+    header{
+        height: 20vh;
+    }
+    .header-navbar nav ul li{
+        padding: 10px 5px;
+    }
+    .footer-principal{
+        width: 80%;
+    }
+    .hotel h1{
+        font-size: 30px;
+    }
+    .nome-projeto h2{
+        font-size: 20px;
+    }
+}
+@media (max-width:300px){
+    .hotel h1{
+        font-size: 25px;
+    }
+}
+@media (max-width:270px){
+    .header-navbar nav ul li:hover  ul{
+        top: 30px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .header-navbar nav ul li ul{
+        top: 20px;
+    }
+}

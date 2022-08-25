@@ -1,0 +1,258 @@
+/* RESETANDO ALGUMAS CONFIGURAÇÕES*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial'; 
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 32, 32);
+}
+
+/* AJUSTANDO O CONTAINER */
+.container{
+    width: 70%;
+    height: 100%;
+    
+    margin: auto;
+}
+
+/* ESTILIZANDO A LINHA DECORATIVA */
+.linha-decorativa{
+    width: 75%;
+    height: 1px;
+    background-color: rgb(0, 105, 105);
+    margin: 0 auto;
+}
+
+
+
+/* AJUSTANDO O HEADER DA PÁGINA */
+header{
+    width: 100%;
+    height: 10vh;
+}
+.header-navbar{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* MEXENDO NA NAVBAR */
+.header-navbar nav ul{
+    display: flex;
+    gap: 50px;
+    height: 100%;
+}
+.header-navbar ul li, a{
+    color: white;
+    transition: all 0.1s linear;
+}
+.header-navbar nav ul li a:hover{
+    filter: drop-shadow(0px -2px 1px rgb(128, 128, 128));
+}
+
+
+
+
+/* AJUSTANDO A PARTE PROJETOS */
+.header-navbar nav ul li{
+    position: relative;
+    padding: 20px 10px;
+    animation: animar1 1s ease-in-out forwards;
+    opacity: 0;
+    cursor: default;
+}
+.header-navbar nav ul li ul{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translatex(-50%);
+
+    width: 130px;
+    height: 60px;
+
+    background-color: rgb(241, 241, 241);
+    filter: drop-shadow(2px 2px 1px rgb(138, 138, 138));
+    border: 5px solid transparent;
+    border-radius: 5px;
+    gap: 3px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+.header-navbar nav ul li ul::before{
+    content: '';
+    
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translatex(-50%) rotate(45deg);
+
+    width: 20px;
+    height: 20px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 3px;
+}
+.header-navbar nav ul li:hover  ul{
+    top: 50px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.header-navbar nav ul li ul li{
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+.header-navbar nav ul li ul li a{
+    color: rgb(0, 20, 20);
+    font-weight: 900;
+    
+    padding: 3px 10px;
+    border-radius: 5px;
+    display: block;
+    transition: all .3s;
+}
+.header-navbar nav ul li ul li a:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 20, 20);
+    filter: drop-shadow(0px 0px 0px rgb(128, 128, 128)); 
+}
+
+
+
+
+/* AJUSTANDO O MAIN DA PÁGINA */
+main{
+    width: 100%;
+    background-color: rgb(0, 39, 39);
+}
+.main-principal{
+    margin: auto;
+    padding: 50px 0;
+    width: 70%;
+
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* AJUSTANDO AS PASTAS */
+.pasta{
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgb(0, 24, 24);
+    border: 1px solid rgb(0, 105, 105);
+    filter: drop-shadow(0px 0px 5px rgba(0, 253, 190, 0.301));
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 5px;
+    transition: all 0.3s;
+    opacity: 0;
+    animation: aparecer .5s ease-in-out forwards;
+}
+.pasta:hover{
+    transform: scale(1.1);
+}
+.main-principal a{
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    margin: auto;
+
+}
+
+.pasta-footer{
+    background-color: rgb(0, 37, 37);
+    border-radius: 5px;
+    
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+.pasta-footer h2{
+    color: white;
+    filter: drop-shadow(-2px -2px 2px rgba(0, 194, 168, 0.432));
+    font-size: 20px;
+    display: block;
+}
+.pasta-footer p{
+    color: white;
+    filter: drop-shadow(-2px -2px 2px rgba(0, 194, 168, 0.432));
+}
+
+
+
+
+
+
+/* AJUSTANDO O FOOTER DA PÁGINA */
+footer{
+    width: 100%;
+    height: 30vh;
+}
+.footer-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+}
+.direitos-autorais{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+/* SCROLLBAR */
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(0, 24, 24);
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(0, 58, 58);
+    border-radius: 20px;
+}
+
+
+
+
+/* ANIMAÇÕES */
+@keyframes animar1{
+    0%{
+        transform: translatey(-10px);
+    }
+    50%{
+        transform: translatey(10px);
+        opacity: 1;
+    }
+    100%{
+        transform: translatey(0px);
+        opacity: 1;
+    }
+}
+@keyframes aparecer{
+    100%{
+        opacity: 1;
+    }
+}
